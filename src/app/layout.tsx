@@ -8,6 +8,11 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://everburninteractive.com'),
   title: 'Everburn Interactive',
   description: 'Everburn Interactive - an indie game studio forged in fire.',
+  icons: {
+    icon: '/EverFlame.png',
+    shortcut: '/EverFlame.png',
+    apple: '/EverFlame.png',
+  },
   openGraph: {
     title: 'Everburn Interactive',
     description: 'Indie game studio. Forged in fire.',
