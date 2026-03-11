@@ -523,7 +523,7 @@ export function SceneCanvas({ isActive }: SceneCanvasProps) {
             shadow-normalBias={0.015}
           />
           <OrbitControls
-            enabled={isActive && !effectiveFocus && !isMobile}
+            enabled={isActive && !effectiveFocus}
             enableRotate={false}
             enableZoom={false}
             enablePan={isActive && !effectiveFocus && !isMobile}
