@@ -335,7 +335,7 @@ interface SceneCanvasProps {
 
 export function SceneCanvas({ isActive }: SceneCanvasProps) {
   const isMobile = useIsMobile();
-  const baseZoom = isMobile ? 50 : 80;
+  const baseZoom = isMobile ? 42 : 80;
   const timePhase = useTimePhase();
   const reducedMotion = useReducedMotion();
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
