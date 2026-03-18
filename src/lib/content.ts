@@ -27,14 +27,14 @@ export const GAMES: GameCard[] = [
     title: 'Marble Party',
     subtitle: 'In Development',
     description:
-      'A fast-paced physics-driven multiplayer party game built around chaotic marble racing, unpredictable environments, and dynamic abilities. Players control unique marbles racing through vibrant obstacle-filled courses where momentum, timing, and clever use of abilities determine the winner.',
-    tags: ['Multiplayer', 'Physics', 'Party Game', 'PC'],
+      'Marble Party is a Twitch-integrated marble racing party game where the audience is not just watching — they are playing. Twitch chat viewers join the race directly through chat commands, controlling their own marbles in real time alongside the streamer. Built on Unreal Engine 5 with server-authoritative physics, every race is chaotic, unpredictable, and entirely shaped by the community in the room.',
+    tags: ['Twitch Integration', 'Multiplayer', 'Physics', 'Party Game', 'PC', 'Live Streaming'],
     status: 'in-development',
   },
 ];
 
 export const FUTURE_PROJECTS_NOTE =
-  'Everburn Interactive is also working on additional projects and long-term IP development that will be revealed in the future. Our goal is to create experiences that push the boundaries of interactive storytelling and gameplay systems.';
+  'Everburn Interactive is actively developing additional original IPs beyond Marble Party. These projects are being built with the same commitment to originality and long-term world design. They will be revealed when the time is right.';
 
 // ─── Technology ───────────────────────────────────────────────────────────────
 
@@ -51,58 +51,57 @@ export interface TechArea {
 
 export const TECHNOLOGY_AREAS: TechArea[] = [
   {
-    title: 'Building with the Best Tools',
+    title: 'Built on the Right Foundation',
     intro:
-      'At Everburn Interactive, we believe that great experiences come from combining strong creative vision with the right technology. Rather than limiting ourselves to a single platform or engine, we work across a wide range of industry-standard tools and development environments to ensure every project is built using the technology that best fits the experience we want to create.',
+      'Every technology decision at Everburn Interactive starts with a single question: what does this specific experience actually need? We do not default to tools because they are popular. We choose them because they are the right fit for the systems we are building — and we go deep.',
   },
   {
-    title: 'Game Engines',
+    title: 'Game Engine — Unreal Engine 5',
     intro:
-      'We primarily build our interactive experiences using modern game engines that allow for high performance, scalability, and flexibility. Our workflow includes experience with engines such as:',
+      'Our primary development engine is Unreal Engine 5, used with C++ as the core programming language. UE5 gives us the performance headroom, physics fidelity, and networking architecture that our games demand. For Marble Party specifically, we build on:',
     bullets: [
-      { label: 'Unreal Engine', text: 'for high-fidelity environments, advanced gameplay systems, and immersive interactive worlds' },
-      { label: 'Unity', text: 'for flexible cross-platform development and rapid iteration' },
-      { text: 'Custom engine tools and internal systems where necessary' },
+      { label: 'Server-authoritative physics', text: 'ensuring every marble behaves consistently for every player and viewer, regardless of their connection' },
+      { label: 'Chaos Physics', text: 'for high-fidelity, deterministic marble simulation at scale' },
+      { label: 'Custom gameplay systems in C++', text: 'for tight control over performance, netcode, and game state' },
+      { label: 'Scalable multiplayer architecture', text: 'designed to handle large simultaneous Twitch audiences without degradation' },
+    ],
+  },
+  {
+    title: 'Backend and Live Infrastructure',
+    intro:
+      'Marble Party is a live-service game built around real-time audience participation. The backend infrastructure is designed to be reliable, scalable, and responsive under streaming conditions:',
+    bullets: [
+      { label: 'AWS', text: 'as the primary cloud infrastructure for game servers, session management, and data pipelines' },
+      { label: 'Twitch EventSub and Chat integration', text: 'for real-time viewer participation directly through Twitch chat commands' },
+      { label: 'Custom telemetry systems', text: 'for monitoring session health, physics performance, and player experience in real time' },
     ],
   },
   {
     title: '3D Creation and Asset Production',
     intro:
-      'Creating believable and engaging worlds requires powerful creative tools. Our art and asset pipelines include software commonly used across the game industry such as:',
+      'Our art and asset pipelines are built for both quality and performance. Every asset that enters our games is optimized for real-time rendering without sacrificing visual character:',
     bullets: [
       { label: 'Blender', text: 'for 3D modeling, sculpting, and animation' },
-      { text: 'Industry-standard texturing and material workflows' },
-      { text: 'Physics-based asset creation and simulation' },
-      { text: 'Optimization pipelines to ensure assets perform efficiently in real-time environments' },
+      { text: 'Physics-based material workflows' },
+      { text: 'LOD and optimization pipelines for real-time performance targets' },
+      { text: 'Custom asset tools built to our specific production needs' },
     ],
   },
   {
-    title: 'Development Tools and Pipelines',
+    title: 'Performance is Not Optional',
     intro:
-      'Game development involves more than just engines and art tools. Our pipeline includes tools for:',
+      'We treat performance as a design constraint, not an afterthought. Every system we build is evaluated against real targets:',
     bullets: [
-      { text: 'Version control and collaborative development' },
-      { text: 'Scripting and gameplay system development' },
-      { text: 'Performance profiling and optimization' },
-      { text: 'Cross-platform testing' },
-      { text: 'Automation and build management' },
+      { text: 'Frame pacing stability under load' },
+      { text: 'Network latency tolerance for live audience sessions' },
+      { text: 'Scalability for future content updates without architectural refactoring' },
+      { text: 'Cross-platform testing discipline from early in development' },
     ],
   },
   {
-    title: 'Performance and Player Experience',
+    title: 'Always Evolving',
     intro:
-      'Technology decisions at Everburn are always made with one goal in mind: delivering the best possible experience for players. Every system is designed with attention to:',
-    bullets: [
-      { text: 'Performance' },
-      { text: 'Stability' },
-      { text: 'Responsiveness' },
-      { text: 'Scalability for future updates' },
-    ],
-  },
-  {
-    title: 'Always Exploring',
-    intro:
-      'The technology landscape evolves quickly, and we continuously explore new tools, techniques, and workflows that can help us create better experiences. Whether it involves new development tools, advanced rendering techniques, or innovative gameplay systems, we remain committed to pushing the boundaries of what interactive experiences can become.',
+      'The technology landscape changes fast. We stay current — not to chase trends, but because better tools mean better experiences. We continuously evaluate new rendering techniques, AI-assisted development workflows, and gameplay systems that can push our projects further than what existing games have attempted.',
   },
 ];
 
@@ -116,7 +115,7 @@ export const TECHNOLOGY_PROJECTS: ProjectCard[] = [
   {
     title: 'Ember Telemetry Toolkit',
     description:
-      'A lightweight metrics package for tracking frame pacing, interaction funnels, and route-transition resilience.',
+      'A lightweight metrics package for tracking frame pacing, interaction funnels, and route-transition resilience across live sessions.',
     techStack: ['TypeScript', 'Web Vitals', 'Custom Analytics'],
   },
 ];
@@ -126,82 +125,90 @@ export const TECHNOLOGY_PROJECTS: ProjectCard[] = [
 export const STUDIO_TAGLINE = 'We build worlds that feel quiet before they burn.';
 
 export const STUDIO_INTRO =
-  'Everburn Interactive is an independent game and technology studio focused on building original interactive experiences, advanced creative tools, and experimental AI-powered systems.';
+  'Everburn Interactive is an independent game and technology studio building original interactive experiences from the ground up. We are a DPIIT-recognized startup based in Gujarat, India, founded in 2026 with a long-term focus on original IP, live-audience game design, and systems that do not already exist.';
 
 export const STUDIO_MISSION =
-  'Founded with a long-term vision of blending game development, artificial intelligence, and immersive technologies, Everburn explores new ways for players and creators to interact with digital worlds.';
+  'Our work begins where existing games end. We look for the experiences that players have not had yet — the mechanics that feel obvious in hindsight but have never been built — and we build them with the craft and patience they deserve.';
 
 export const STUDIO_DOMAINS: string[] = [
-  'Video games',
-  'Interactive simulations',
-  'AI-powered creative tools',
-  'Virtual reality experiences',
-  'Advanced developer tooling',
+  'Twitch-integrated live audience gaming',
+  'Physics-driven multiplayer experiences',
+  'Original long-term IP development',
+  'AI-powered creative and development tools',
+  'Immersive interactive world design',
 ];
 
 export const STUDIO_PHILOSOPHY_INTRO =
-  'At Everburn Interactive, we believe that great games are not just products — they are worlds. Every system we build is designed around three core principles:';
+  'At Everburn Interactive, we believe the best games are not iterations — they are inventions. Every project is built around four principles that we refuse to compromise on:';
 
 export const STUDIO_PRINCIPLES: PhilosophyPrinciple[] = [
   {
-    title: 'Player Agency',
+    title: 'Uniqueness in All Aspects',
     description:
-      'Players should feel that their actions matter. Systems should react dynamically and allow emergent gameplay rather than rigid scripted experiences.',
+      'We do not build what already exists. Before any project moves forward, we ask one question: has anyone made something that feels exactly like this? If the answer is yes, we go deeper. Originality is not a goal we aim for — it is a standard we hold from day one.',
   },
   {
-    title: 'Technological Innovation',
+    title: 'Player Agency',
     description:
-      'We actively explore cutting-edge tools, AI systems, and experimental design approaches to push beyond traditional development boundaries.',
+      'Players and audiences should feel that their presence changes the experience. Whether it is a viewer joining a race through Twitch chat or a player making a split-second decision, our systems are built to react, respond, and reward real participation.',
   },
   {
     title: 'Long-Term Worldbuilding',
     description:
-      'Our projects are designed with long-term universes in mind, where stories, mechanics, and worlds can evolve over time.',
+      'Every project at Everburn is designed as a long-term world, not a disposable release. Stories, mechanics, and universes are built with room to grow — because we are building a catalog of original IPs, not a portfolio of one-off games.',
+  },
+  {
+    title: 'Technological Integrity',
+    description:
+      'Technology decisions are made in service of the experience, never for convenience. We use the tools that the project demands — even when that means going deeper into C++, building custom systems, or rebuilding something from scratch to get it right.',
   },
 ];
 
 export const STUDIO_VISION_INTRO = 'Everburn Interactive is building toward a future where:';
 
 export const STUDIO_VISION_BULLETS: string[] = [
-  'Games feel alive and reactive',
-  'AI assists both developers and players',
-  'Interactive worlds grow and evolve with their communities',
+  'Live audiences are full participants in games, not passive spectators',
+  'Original IPs with genuine mechanical identity stand alongside the industry\'s best',
+  'AI and interactive technology expand what games are capable of being',
+  'A studio built in India earns its place among the world\'s leading game developers',
 ];
 
 export const STUDIO_VISION_CLOSE =
-  'Our long-term goal is to develop both flagship original IPs and powerful tools that empower creators.';
+  'Our long-term goal is to build games and tools that are genuinely unlike anything else — because the experiences worth making are the ones that do not exist yet.';
 
 export const STUDIO_STORY: string[] = [
-  'Everburn Interactive LLP was formed to chase a specific feeling: interactive spaces that are atmospheric, intentional, and mechanically sharp. We are a compact team that prefers deliberate craft over volume.',
-  'Our studio grew from late-night prototypes and long conversations about memory, myth, and play. We focus on projects that reward attention and leave players with a lingering afterimage rather than a checklist of features.',
-  'Every release is treated as a long-term world, not a disposable sprint. We iterate patiently, tighten systems relentlessly, and ship when the flame is stable.',
+  'Everburn Interactive LLP was incorporated in February 2026 in Ahmedabad, Gujarat, and received DPIIT recognition as a startup in the Toys and Games sector the same month. We are early-stage and intentional about it.',
+  'We started with a specific feeling we wanted to create: a game where a Twitch audience is not watching someone play — they are the players. That idea became Marble Party, and it remains the clearest example of what Everburn builds toward: experiences that have not been done before.',
+  'We move deliberately. We build cleanly. We ship when the work is ready, not when the calendar says so.',
 ];
 
 export const STUDIO_VISION =
-  'Everburn is building a catalog of original worlds connected by craft discipline, systemic depth, and a signature tone of calm intensity.';
+  'Everburn is building a catalog of original worlds connected by craft discipline, systemic depth, and an uncompromising commitment to originality.';
 
 export const STUDIO_CURRENT_PROJECTS: Array<{ label: string; href: string }> = [
   { label: 'Marble Party', href: '/games' },
-  { label: 'Runtime Technology Notes', href: '/technology' },
+  { label: 'Technology', href: '/technology' },
 ];
 
 // ─── Contact Us ───────────────────────────────────────────────────────────────
 
-export const CONTACT_INTRO = 'If you are interested in our projects, technology, or potential collaborations, feel free to reach out.';
+export const CONTACT_INTRO =
+  'We are an early-stage independent studio and we are deliberate about who we build with. If our work, our vision, or our technology interests you — we want to hear from you.';
 
 export const CONTACT_AUDIENCES: string[] = [
-  'Developers',
-  'Creators',
-  'Collaborators',
-  'Communities',
-  'Industry partners',
+  'Publishers and platform partners',
+  'Streamers and content creators',
+  'Developers and technical collaborators',
+  'Press and media',
+  'Players and community members',
 ];
 
 export const CONTACT_CONTENT = {
-  company: 'Everburn Interactive',
-  location: 'Gujarat, India',
+  company: 'Everburn Interactive LLP',
+  registration: 'LLPIN: ACV-2902 | DPIIT Recognized Startup',
+  location: 'Ahmedabad, Gujarat, India',
   email: 'contact@everburninteractive.com',
-  partnerships: 'partnerships@everburn.studio',
+  partnerships: 'contact@everburninteractive.com',
   website: 'https://everburninteractive.com',
   social: [
     { label: 'YouTube — @everburninteractive', href: 'https://www.youtube.com/@everburninteractive' },
@@ -211,4 +218,4 @@ export const CONTACT_CONTENT = {
 };
 
 export const CONTACT_FOLLOW_NOTE =
-  'As our projects grow, more updates and development insights will be shared through our official channels and community platforms. Stay tuned as we continue building new worlds and technologies.';
+  'Marble Party is in active development. Development updates, behind-the-scenes content, and community announcements will be shared across our channels as the project progresses. Follow along and be part of what we are building.';
